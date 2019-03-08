@@ -1,0 +1,39 @@
+{
+    "name": "mysite-digital/silverstripe-elemental-quote-banner",
+    "description": "A block to add a quote banner to your page.",
+    "authors": [
+        {
+            "name": "My Site Digital",
+            "homepage": "https://github.com/mysite-digital/"
+        }
+    ],
+    "keywords": [
+        "silverstripe", "elemental", "content", "blocks", "quote"
+    ],
+    "type": "silverstripe-module",
+    "license": "BSD-3-Clause",
+    "require": {
+        "dnadesign/silverstripe-elemental": "^4@dev",
+        "silverstripe/recipe-cms": "^4@dev",
+        "silverstripe/vendor-plugin": "^1@dev",
+        "tractorcow/silverstripe-colorpicker": "^4@dev"
+    },
+    "require-dev": {
+        "phpunit/PHPUnit": "^5.7"
+    },
+    "config": {
+        "process-timeout": 600
+    },
+    "autoload": {
+        "psr-4": {
+            "MySiteDigital\\ElementQuoteBanner\\": "src/"
+        }
+    },
+    "extra": {
+        "expose": [
+            "css"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -1,0 +1,15 @@
+.element.quote-banner {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.element.quote-banner blockquote{
+    display: inline-block;
+    max-width: 800px;
+    margin: 0;
+}
+
+.element.quote-banner cite{
+    padding-left: 32px;
+}
