@@ -10,7 +10,7 @@
     "keywords": [
         "silverstripe", "elemental", "content", "blocks", "quote"
     ],
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "license": "BSD-3-Clause",
     "require": {
         "dnadesign/silverstripe-elemental": "^4@dev",
