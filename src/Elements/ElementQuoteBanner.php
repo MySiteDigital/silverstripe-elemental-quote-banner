@@ -5,7 +5,9 @@ namespace MySiteDigital\Elements;
 use MySiteDigital\Elements\ElementalQuoteBannerController;
 
 use DNADesign\Elemental\Models\BaseElement;
+use Heyday\ColorPalette\Fields\ColorPaletteField;
 use TractorCow\Colorpicker\Color;
+use SilverStripe\Core\Config\Configurable;
 use SilverStripe\Forms\TextField;
 
 /**
@@ -55,6 +57,7 @@ class ElementQuoteBanner extends BaseElement
     private static $db = [
         'QuoteContent' => 'HTMLText',
         'Citation' => 'Varchar',
+        'CitationAlignment' => 'Enum("Left,Center,Right")',
         'BgColor' => Color::class,
         'TextColor' => Color::class
     ];
@@ -73,7 +76,40 @@ class ElementQuoteBanner extends BaseElement
             'QuoteContent'
         );
 
-        $fields->dataFieldByName('BgColor')->setTitle('Background Colorr');
+        $bgPallette = $this->config()->get('bg_colour_pallette');
+
+        if($bgPallette){
+            $fields->replaceField(
+            	'BgColor',
+            	ColorPaletteField::create(
+            		'BgColor',
+            		'Background Colour',
+                    array_combine(
+                        $bgPallette,
+                        $bgPallette
+                    )
+            	)
+            );
+        }
+        else {
+            $fields->dataFieldByName('BgColor')->setTitle('Background Colour');
+        }
+
+
+        $textPallette = $this->config()->get('text_colour_pallette');
+        if($textPallette){
+            $fields->replaceField(
+            	'TextColor',
+            	ColorPaletteField::create(
+            		'TextColor',
+            		'Text Colour',
+                    array_combine(
+                        $textPallette,
+                        $textPallette
+                    )
+                )
+            );
+        }
 
         return $fields;
     }

@@ -2,7 +2,7 @@
     $QuoteContent
 
     <% if $Citation %>
-        <footer>
+        <footer style="text-align:$CitationAlignment;">
             <cite>$Citation</cite>
         </footer>
     <% end_if %>

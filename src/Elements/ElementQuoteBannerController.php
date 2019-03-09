@@ -42,11 +42,11 @@ class ElementalQuoteBannerController extends ElementController {
         }
 
         if($this->BgColor){
-            $style .= 'background-color:#' . $this->BgColor . ';';
+            $style .= 'background-color:#' . str_replace('#', '', $this->BgColor) . ';';
         }
 
         if($this->TextColor){
-            $style .= 'color:#' . $this->TextColor . ';';
+            $style .= 'color:#' . str_replace('#', '', $this->TextColor) . ';';
         }
         return $style;
     }

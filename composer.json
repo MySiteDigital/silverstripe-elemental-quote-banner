@@ -16,7 +16,8 @@
         "dnadesign/silverstripe-elemental": "^4@dev",
         "silverstripe/recipe-cms": "^4@dev",
         "silverstripe/vendor-plugin": "^1@dev",
-        "tractorcow/silverstripe-colorpicker": "^4@dev"
+        "tractorcow/silverstripe-colorpicker": "^4@dev",
+        "heyday/silverstripe-colorpalette": "2.0^"
     },
     "require-dev": {
         "phpunit/PHPUnit": "^5.7"
